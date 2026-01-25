@@ -220,11 +220,14 @@ export default function Index() {
                   engagements.
                 </li>
               </ul>
-              <img
-                src="/images/abstact-BG.png"
+              <img src="./images/abstract-BG.png" alt="Worker" />
+              {/* <Image
+                src="/images/abstract-BG.png"
                 alt="abstract"
+                width={500}
+                height={500}
                 className="abstract-BG"
-              />
+              /> */}
             </div>
 
             <div className="cc-box">
@@ -250,11 +253,7 @@ export default function Index() {
                   solutions.
                 </li>
               </ul>
-              <img
-                src="/images/abstract-BG.png"
-                alt="abstract"
-                className="abstract-BG"
-              />
+              <img src="./images/abstract-BG.png" alt="Worker" />
             </div>
           </div>
         </div>

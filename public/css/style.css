@@ -1155,6 +1155,7 @@ header .acc-item {
 
 .overlay li a {
   color: #fff;
+  text-decoration: none;
 }
 
 .overlay li::before {
@@ -2164,7 +2165,7 @@ body .pbmit-bg-color-blackish {
   position: absolute;
   left: 0;
   top: 4px;
-  background-image: url(/threatsys/images/shield.png);
+  background-image: url("/images/shield.png");
   width: 24px;
   height: 24px;
   object-fit: cover;
@@ -2719,6 +2720,7 @@ body .pbmit-bg-color-blackish {
   font-size: 31px;
   line-height: 40px;
   font-weight: 600;
+  color: rgb(11, 36, 73);
 }
 
 .border-part {
@@ -4816,11 +4818,11 @@ position: absolute;
   border-radius: 12px;
   background-size: cover;
   background-position: center;
-  background-image: url(/threatsys/images/02.jpg);
+  background-image: url(/images/02.jpg);
 }
 
 .worker-image-placeholder.mission-img {
-  background-image: url(/threatsys/images/mission-img.jpg);
+  background-image: url(/images/mission-img.jpg);
 }
 
 /* --- Floating Statistics Boxes --- */
@@ -5472,7 +5474,8 @@ position: absolute;
 }
 
 .card-main .card-img-placeholder {
-  background-image: url("/threatsys/images/career/Image 3.jpeg");
+  background-image: url("../images/career/Image 3.jpeg");
+
   background-size: cover;
   background-position: center top;
   background-color: #4caf50;
@@ -5484,7 +5487,7 @@ position: absolute;
 }
 
 .card-top-left .card-img-placeholder {
-  background-image: url("/threatsys/images/career/Image 5.jpeg");
+  background-image: url("../images/career/Image 5.jpeg");
   background-size: cover;
   background-position: center;
   background-color: #2196f3;
@@ -5496,7 +5499,7 @@ position: absolute;
 }
 
 .card-bottom-left .card-img-placeholder {
-  background-image: url("/threatsys/images/career/Image 1.jpeg");
+  background-image: url("../images/career/Image 1.jpeg");
   background-size: cover;
   background-position: center;
   background-color: #ff9800;
@@ -5508,7 +5511,7 @@ position: absolute;
 }
 
 .card-top-right .card-img-placeholder {
-  background-image: url("/threatsys/images/career/Image 4.jpeg");
+  background-image: url("../images/career/Image 4.jpeg");
   background-size: cover;
   background-position: center;
   background-color: #9c27b0;
@@ -5520,7 +5523,7 @@ position: absolute;
 }
 
 .card-bottom-right .card-img-placeholder {
-  background-image: url("/threatsys/images/career/Image 2.jpeg");
+  background-image: url("../images/career/Image 2.jpeg");
   background-size: cover;
   background-position: center;
   background-color: #00bcd4;
@@ -11457,4 +11460,20 @@ body.dark-theme p {
 
 .menu-item {
   color: black;
+}
+.certificate-container {
+  margin-top: 30px;
+}
+
+.certificate-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.certificate-row img {
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
 }

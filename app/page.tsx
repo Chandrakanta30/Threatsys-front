@@ -10,6 +10,9 @@ import "swiper/css/parallax";
 import { Autoplay, Navigation, Pagination, Parallax } from "swiper/modules";
 import LogoSlider from "./common-components/LogoSlider";
 import { useState } from "react";
+import { ArrowIcon } from "./common-components/ArrowComponent";
+import { ReadMoreButton } from "./common-components/ReadMoreButton";
+
 // SwiperCore.use([Navigation, Pagination, Parallax, Autoplay]);
 
 export default function Home() {
@@ -68,6 +71,7 @@ export default function Home() {
   const panels = [
     {
       title: "Government Industry",
+      bg: "bg--one",
       items: [
         "Risk & Vulnerability Assessments",
         "Penetration Testing",
@@ -81,6 +85,7 @@ export default function Home() {
     },
     {
       title: "Banking & Finance",
+      bg: "bg--two",
       items: [
         "Core Banking & Payment System Security Testing",
         "Mobile Banking & Wallet Security Assessment",
@@ -94,6 +99,7 @@ export default function Home() {
     },
     {
       title: "IT, ITes & Retail Industry",
+      bg: "bg--three",
       items: [
         "Web, Mobile & SaaS Platform Security Testing",
         "API & Microservices Security",
@@ -107,6 +113,7 @@ export default function Home() {
     },
     {
       title: "Manufacturing & Telecom",
+      bg: "bg--four",
       items: [
         "SCADA / ICS / OT Security Testing",
         "IoT & Embedded Device Security",
@@ -120,6 +127,7 @@ export default function Home() {
     },
     {
       title: "Healthcare",
+      bg: "bg--five",
       items: [
         "Hospital Network & Server Security",
         "EMR/EHR Application Security Testing",
@@ -134,6 +142,7 @@ export default function Home() {
     },
     {
       title: "Higher Education",
+      bg: "bg--six",
       items: [
         "LMS & Student Portal Security Testing",
         "Campus Network & Wi-Fi Infrastructure Audit",
@@ -149,6 +158,69 @@ export default function Home() {
 
   const [activePanel, setActivePanel] = useState(0);
 
+  const awardsRow1 = [
+    "/images/Award Achieved-01.png",
+    "/images/Award Achieved-02.png",
+    "/images/Award Achieved-03.png",
+    "/images/Award Achieved-04.png",
+    "/images/Award Achieved-05.png",
+  ];
+
+  const awardsRow2 = [
+    "/images/Award Achieved-06.png",
+    "/images/Award Achieved-07.png",
+    "/images/Award Achieved-08.png",
+    "/images/Award Achieved-09.png",
+    "/images/Award Achieved-10.png",
+  ];
+
+  const certificates = [
+    "/images/certificate-deepak-ku-nath-1.png",
+    "/images/certificate-deepak-ku-nath-2.png",
+    "/images/certificate-deepak-ku-nath-3.png",
+    "/images/certificate-deepak-ku-nath-4.png",
+    "/images/certificate-deepak-ku-nath-5.png",
+    "/images/certificate-deepak-ku-nath-6.jpeg",
+    "/images/certificate-deepak-ku-nath-7.png",
+    "/images/certificate-deepak-ku-nath-8.png",
+    "/images/certificate-deepak-ku-nath-9.png",
+    "/images/certificate-deepak-ku-nath-10.png",
+    "/images/certificate-deepak-ku-nath-11.jpg",
+    "/images/certificate-deepak-ku-nath-12.png",
+    "/images/certificate-deepak-ku-nath-13.png",
+    "/images/certificate-deepak-ku-nath-14.png",
+    "/images/certificate-deepak-ku-nath-15.png",
+    "/images/certificate-deepak-ku-nath-16.png",
+  ];
+
+  const products = [
+    {
+      img: "/images/subhdra.png",
+      title: "Ensuring Data Security for One Crore Women Under Subhadra Yojana",
+      date: "3rd May 2024",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1568605114967-8130f3a36994",
+      title: "Ensuring Data Security for One Crore Women Under Subhadra Yojana",
+      date: "3rd May 2024",
+    },
+    {
+      img: "/images/subhdra.png",
+      title: "Ensuring Data Security for One Crore Women Under Subhadra Yojana",
+      date: "3rd May 2024",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1568605114967-8130f3a36994",
+      title: "Ensuring Data Security for One Crore Women Under Subhadra Yojana",
+      date: "3rd May 2024",
+    },
+    {
+      img: "/images/subhdra.png",
+      title: "Ensuring Data Security for One Crore Women Under Subhadra Yojana",
+      date: "3rd May 2024",
+    },
+  ];
+
   return (
     <>
       {/* <!-- ============header-search=========== --> */}
@@ -158,30 +230,7 @@ export default function Home() {
             <div className="col-12">
               <div className="search__wrapper">
                 <div className="search__close">
-                  <button type="button" className="search-close-btn">
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M17 1L1 17"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M1 1L17 17"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  </button>
+                  <button type="button" className="search-close-btn"></button>
                 </div>
                 <div className="search__form">
                   <form action="#">
@@ -192,18 +241,7 @@ export default function Home() {
                         placeholder="Type keywords here"
                       />
                       <span className="search-focus-border"></span>
-                      <button type="submit">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="22"
-                          height="22"
-                          fill="#000"
-                          className="bi bi-search"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
-                        </svg>
-                      </button>
+                      <button type="submit"></button>
                     </div>
                   </form>
                 </div>
@@ -271,19 +309,7 @@ export default function Home() {
                           data-swiper-parallax="-5000"
                         >
                           <span>Let&apos;s Validate Defenses</span>
-                          <div className="icon">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              fill="none"
-                              stroke="#000"
-                              strokeWidth="2"
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                          </div>
+                          <div className="icon"></div>
                         </a>
                       </div>
                     </div>
@@ -450,19 +476,7 @@ export default function Home() {
 
                     <a href="#" className="cta-btn fill-icon d-none">
                       <span>Get Secured Now</span>
-                      <div className="icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="none"
-                          stroke="#000"
-                          stroke-width="2"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                      </div>
+                      <div className="icon"></div>
                     </a>
                     <section className="meeting-card-section">
                       <div className="meeting-card">
@@ -1386,40 +1400,49 @@ export default function Home() {
                 <h2>Recognitions of Excellence</h2>
                 <p>Stacked with Awards, Stepping with Success</p>
 
-                {/* Award Slider Row 1 */}
                 <div className="awards-icons">
-                  <div className="swiper awardsSwiper">
-                    <div className="swiper-wrapper">
-                      {["01", "02", "03", "04", "05"].map((num) => (
-                        <div className="swiper-slide" key={num}>
-                          <div className="award">
-                            <img
-                              src={`./images/Award Achieved-${num}.png`}
-                              alt="Award"
-                            />
-                          </div>
+                  <Swiper
+                    className="awardsSwiper"
+                    slidesPerView={5}
+                    spaceBetween={20}
+                    loop
+                  >
+                    {awardsRow1.map((src, index) => (
+                      <SwiperSlide key={index}>
+                        <div className="award">
+                          <Image
+                            src={src}
+                            alt={`Award ${index + 1}`}
+                            width={150}
+                            height={150}
+                          />
                         </div>
-                      ))}
-                    </div>
-                  </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>
 
-                {/* Award Slider Row 2 */}
+                {/* Second Row */}
                 <div className="awards-icons">
-                  <div className="swiper awardsSwiper">
-                    <div className="swiper-wrapper">
-                      {["06", "07", "08", "09", "10"].map((num) => (
-                        <div className="swiper-slide" key={num}>
-                          <div className="award">
-                            <img
-                              src={`./images/Award Achieved-${num}.png`}
-                              alt="Award"
-                            />
-                          </div>
+                  <Swiper
+                    className="awardsSwiper"
+                    slidesPerView={5}
+                    spaceBetween={20}
+                    loop
+                  >
+                    {awardsRow2.map((src, index) => (
+                      <SwiperSlide key={index}>
+                        <div className="award">
+                          <Image
+                            src={src}
+                            alt={`Award ${index + 6}`}
+                            width={150}
+                            height={150}
+                          />
                         </div>
-                      ))}
-                    </div>
-                  </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>
               </div>
             </div>
@@ -1593,37 +1616,45 @@ export default function Home() {
         <div className="container">
           <div className="ceo-container">
             <div className="row">
+              {/* Left */}
               <div className="col-xl-5 col-lg-5 col-12">
                 <div className="message-left">
-                  {/* <div className="circle-1"><div className="inner-circle"></div></div> */}
-
-                  <img
-                    src="./images/round-line.png"
-                    alt="Image"
+                  <Image
+                    src="/images/round-line.png"
+                    alt="Round Line"
+                    width={300}
+                    height={300}
                     className="round-line"
                   />
 
                   <div className="bg-line1"></div>
 
-                  <img
-                    src="./images/banner-img-2.png"
+                  <Image
+                    src="/images/banner-img-2.png"
                     alt="CEO Image"
+                    width={450}
+                    height={550}
                     className="ceo-img wow fadeInLeft"
                   />
                 </div>
               </div>
 
+              {/* Right */}
               <div className="col-xl-7 col-lg-7 col-12">
                 <div className="message-right">
-                  <img
-                    src="./images/md-msg-shape.png"
+                  <Image
+                    src="/images/md-msg-shape.png"
                     alt="shape"
+                    width={200}
+                    height={200}
                     className="md-div-shp"
                   />
 
-                  <img
-                    src="./images/quotes.png"
-                    alt="Logo"
+                  <Image
+                    src="/images/quotes.png"
+                    alt="Quotes"
+                    width={80}
+                    height={80}
                     className="line-logo-img"
                   />
 
@@ -1636,9 +1667,11 @@ export default function Home() {
                       CEO&apos;s <span className="gradient-yl">Message</span>
                     </h2>
 
-                    <img
-                      src="./images/line.png"
-                      alt="img"
+                    <Image
+                      src="/images/line.png"
+                      alt="line"
+                      width={120}
+                      height={10}
                       className="header-line"
                     />
                   </div>
@@ -1652,24 +1685,36 @@ export default function Home() {
                     guided by our commitment to excellence, innovation, and
                     resilience.{" "}
                     <strong>
-                      “Together, we are building a safer digital future.”
+                      &quot;Together, we are building a safer digital
+                      future&quot;.
                     </strong>
                   </p>
-
-                  {/* <h5>"Together, we are building a safer digital future".</h5> */}
 
                   <h4 className="name wow fadeInUp">Deepak Ku Nath</h4>
                   <h6 className="desg wow fadeInUp">Managing Director & CEO</h6>
 
+                  {/* Certificates */}
                   <div className="certificate-container wow fadeInUp">
-                    <div className="certificate-grid">
-                      {Array.from({ length: 16 }, (_, i) => (
-                        <img
-                          key={i}
-                          src={`./images/certificate-deepak-ku-nath-${i + 1}.${
-                            i === 5 ? "jpeg" : i === 10 ? "jpg" : "png"
-                          }`}
-                          alt={`Certificate ${i + 1}`}
+                    <div className="certificate-row">
+                      {certificates.slice(0, 8).map((src, index) => (
+                        <Image
+                          key={index}
+                          src={src}
+                          alt={`Certificate ${index + 1}`}
+                          width={150}
+                          height={100}
+                        />
+                      ))}
+                    </div>
+
+                    <div className="certificate-row">
+                      {certificates.slice(8, 16).map((src, index) => (
+                        <Image
+                          key={index + 8}
+                          src={src}
+                          alt={`Certificate ${index + 9}`}
+                          width={150}
+                          height={100}
                         />
                       ))}
                     </div>
@@ -1682,23 +1727,29 @@ export default function Home() {
       </section>
 
       <section className="section industries-section">
-        <h3 className="wow fadeInUp top-text text-align-center">Industries</h3>
-        <h2
-          className="wow fadeInUp text-align-center"
-          data-wow-delay="0.2s"
-          data-cursor="-opaque"
-        >
-          The Service
+        <h3 className="top-text text-align-center">Industries</h3>
+        <h2 className="text-align-center">
+          The Service{" "}
           <span className="gradient-text">We Secured Seamlessly</span>
         </h2>
+
         <div className="container">
           <div className="panels">
             {panels.map((panel, index) => (
               <div
                 key={index}
-                className={`panel ${activePanel === index ? "active" : ""}`}
+                className={`panel ${panel.bg} ${
+                  activePanel === index ? "active" : ""
+                }`}
                 onMouseEnter={() => setActivePanel(index)}
+                onClick={() => setActivePanel(index)}
               >
+                {/* Hover Icon */}
+                <div className="hover-icon">
+                  <ArrowIcon />
+                </div>
+
+                {/* Content */}
                 <div className="content-up">
                   <span>{panel.title}</span>
                   <ul>
@@ -1708,25 +1759,168 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
+
                   <a href="#" className="cta-btn">
                     Know More
                     <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="none"
-                        stroke="#000"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                      </svg>
+                      <ArrowIcon />
                     </div>
                   </a>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="home-scroll_section section p-0">
+        {/* LEFT IMAGES */}
+        <div className="grid-col home-scroll_visual page-padding">
+          <div className="home-scroll_img-wrap w-dyn-list">
+            <div role="list" className="home-scroll_img-list w-dyn-items">
+              {/* 1 */}
+              <div role="listitem" className="home-scroll_img-item w-dyn-item">
+                <Image
+                  src="/images/awards-img-1.jpg"
+                  alt="Awards"
+                  width={600}
+                  height={800}
+                  className="home-scroll_img"
+                />
+              </div>
+
+              {/* 2 */}
+              <div role="listitem" className="home-scroll_img-item w-dyn-item">
+                <Image
+                  src="/images/awards-img-2.jpg"
+                  alt="Awards"
+                  width={600}
+                  height={800}
+                  className="home-scroll_img"
+                />
+              </div>
+
+              {/* 3 */}
+              <div role="listitem" className="home-scroll_img-item w-dyn-item">
+                <Image
+                  src="/images/MSME-img.jpg"
+                  alt="MSME"
+                  width={600}
+                  height={800}
+                  className="home-scroll_img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT CONTENT */}
+        <div className="grid-col home-scroll_content page-padding">
+          <div className="home-scroll_text-wrap w-dyn-list">
+            <div role="list" className="home-scroll_text-list w-dyn-items">
+              {/* 1 */}
+              <div role="listitem" className="home-scroll_text-item w-dyn-item">
+                <Image
+                  src="/images/awards-img-1.jpg"
+                  alt="Awards"
+                  width={400}
+                  height={300}
+                  className="home-scroll_photo"
+                />
+
+                <h2 className="wow fadeInUp" data-wow-delay="0.2s">
+                  Unmatched Success And <br />
+                  <span className="gradient-text">
+                    Unparalleled Achievements
+                  </span>
+                </h2>
+
+                <ul className="services">
+                  <li>
+                    Emerging Entrepreneur in Cyber Security award from Lt. Gen.
+                    K. T. Parnaik at ETNow Business Conclave 2025
+                  </li>
+                  <li>
+                    Best Cyber Security Company of India award by Hon’ble
+                    Minister Nitin Gadkari
+                  </li>
+                  <li>
+                    CEO honored as Best Cyber Security Entrepreneur of India –
+                    2024
+                  </li>
+                  <li>
+                    CEO honored as the Youngest Entrepreneur of Odisha by IIT
+                    Bhubaneswar
+                  </li>
+                </ul>
+
+                <ReadMoreButton />
+              </div>
+
+              {/* 2 */}
+              <div role="listitem" className="home-scroll_text-item w-dyn-item">
+                <Image
+                  src="/images/awards-img-2.jpg"
+                  alt="Awards"
+                  width={400}
+                  height={300}
+                  className="home-scroll_photo"
+                />
+
+                <h2 className="wow fadeInUp" data-wow-delay="0.2s">
+                  The Best Cybersecurity Company <br />
+                  <span className="gradient-text">Everyone Trusts Blindly</span>
+                </h2>
+
+                <ul className="services">
+                  <li>
+                    Excellence in Cyber Security award by Entrepreneur Magazine,
+                    Bangalore
+                  </li>
+                  <li>Best Cyber Security Personality of the Year 2025</li>
+                  <li>
+                    Partnered with Government of Odisha at Make in Odisha 2025
+                  </li>
+                </ul>
+
+                <ReadMoreButton />
+              </div>
+
+              {/* 3 */}
+              <div role="listitem" className="home-scroll_text-item w-dyn-item">
+                <Image
+                  src="/images/MSME-img.jpg"
+                  alt="MSME"
+                  width={400}
+                  height={300}
+                  className="home-scroll_photo"
+                />
+
+                <h2 className="wow fadeInUp" data-wow-delay="0.2s">
+                  Shaping the Future of Digital <br />
+                  <span className="gradient-text">
+                    Security in Odisha & Beyond
+                  </span>
+                </h2>
+
+                <ul className="services">
+                  <li>
+                    Industry Excellence Award at Odisha Nirmana MSME Summit 2025
+                  </li>
+                  <li>
+                    Recognized for strengthening Odisha’s digital ecosystem
+                  </li>
+                  <li>
+                    Honored for Driving Innovation & Impact in Cybersecurity
+                  </li>
+                  <li>
+                    Vision to build a globally competitive cybersecurity hub
+                  </li>
+                </ul>
+
+                <ReadMoreButton />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1814,19 +2008,7 @@ export default function Home() {
 
                 <a href="#" className="cta-btn fill-icon mt-0">
                   <span>Read More</span>
-                  <div className="icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="none"
-                      stroke="#000"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </div>
+                  <div className="icon"></div>
                 </a>
               </div>
 
@@ -1866,19 +2048,7 @@ export default function Home() {
 
                 <a href="#" className="cta-btn fill-icon mt-0">
                   <span>Read More</span>
-                  <div className="icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="none"
-                      stroke="#000"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </div>
+                  <div className="icon"></div>
                 </a>
               </div>
 
@@ -1929,19 +2099,7 @@ export default function Home() {
 
                 <a href="#" className="cta-btn fill-icon mt-0">
                   <span>Read More</span>
-                  <div className="icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="none"
-                      stroke="#000"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </div>
+                  <div className="icon"></div>
                 </a>
               </div>
             </div>
@@ -2116,114 +2274,58 @@ export default function Home() {
           </h2>
 
           <div className="product-slider">
-            <div className="swiper productSwiper">
-              <div className="swiper-wrapper">
-                {/* <!-- Product Card 1 --> */}
-                <div className="swiper-slide">
-                  <a href="" className="product-card">
+            <Swiper
+              modules={[Navigation]}
+              className="productSwiper"
+              slidesPerView={4}
+              spaceBetween={30}
+              loop={false}
+              navigation={{
+                nextEl: ".next-btn",
+                prevEl: ".prev-btn",
+              }}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                991: {
+                  slidesPerView: 4,
+                },
+              }}
+            >
+              {products.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <a href="#" className="product-card">
                     <div className="product-img">
-                      <img src="./images/subhdra.png" alt="Image" />
-                    </div>
-                    <div className="product-content">
-                      <h4>
-                        Ensuring Data Security for One Crore Women Under
-                        Subhadra Yojana
-                      </h4>
-
-                      <div className="product-meta">
-                        <span className="date">3rd May 2024</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                {/* <!-- Product Card 2 --> */}
-                <div className="swiper-slide">
-                  <a href="" className="product-card">
-                    <div className="product-img">
-                      <img
-                        src="https://images.unsplash.com/photo-1568605114967-8130f3a36994"
-                        alt="Image"
+                      <Image
+                        src={item.img}
+                        alt="Product"
+                        width={400}
+                        height={300}
                       />
                     </div>
+
                     <div className="product-content">
-                      <h4>
-                        Ensuring Data Security for One Crore Women Under
-                        Subhadra Yojana
-                      </h4>
+                      <h4>{item.title}</h4>
 
                       <div className="product-meta">
-                        <span className="date">3rd May 2024</span>
+                        <span className="date">{item.date}</span>
                       </div>
                     </div>
                   </a>
-                </div>
+                </SwiperSlide>
+              ))}
 
-                {/* <!-- Product Card 3 --> */}
-                <div className="swiper-slide">
-                  <a href="" className="product-card">
-                    <div className="product-img">
-                      <img src="./images/subhdra.png" alt="Project" />
-                    </div>
-                    <div className="product-content">
-                      <h4>
-                        Ensuring Data Security for One Crore Women Under
-                        Subhadra Yojana
-                      </h4>
-
-                      <div className="product-meta">
-                        <span className="date">3rd May 2024</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                {/* <!-- Product Card 4 --> */}
-                <div className="swiper-slide">
-                  <a href="" className="product-card">
-                    <div className="product-img">
-                      <img
-                        src="https://images.unsplash.com/photo-1568605114967-8130f3a36994"
-                        alt="Image"
-                      />
-                    </div>
-                    <div className="product-content">
-                      <h4>
-                        Ensuring Data Security for One Crore Women Under
-                        Subhadra Yojana
-                      </h4>
-
-                      <div className="product-meta">
-                        <span className="date">3rd May 2024</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                {/* <!-- Product Card 5 --> */}
-                <div className="swiper-slide">
-                  <a href="" className="product-card">
-                    <div className="product-img">
-                      <img src="./images/subhdra.png" alt="Project" />
-                    </div>
-                    <div className="product-content">
-                      <h4>
-                        Ensuring Data Security for One Crore Women Under
-                        Subhadra Yojana
-                      </h4>
-
-                      <div className="product-meta">
-                        <span className="date">3rd May 2024</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
+              {/* Navigation Buttons */}
               <div className="next-prev justify-content-start">
                 <div className="nav-btn prev-btn"></div>
                 <div className="nav-btn next-btn"></div>
               </div>
-            </div>
+            </Swiper>
           </div>
         </div>
       </section>
@@ -2556,7 +2658,7 @@ export default function Home() {
               <a className="front-blog-item article-blog wow fadeInUp" href="#">
                 <div
                   className="front-blog-item-thumbnail article__thumbnail"
-                  // style="background-image: url('./images/blog1.jpg')"
+                  style={{ backgroundImage: "url('/images/blog1.jpg')" }}
                 ></div>
 
                 <div className="front-blog-item-content article__body">
@@ -2590,7 +2692,7 @@ export default function Home() {
               <a className="front-blog-item article-blog wow fadeInUp" href="#">
                 <div
                   className="front-blog-item-thumbnail article__thumbnail"
-                  // style="background-image: url('./images/blog2.jpg')"
+                  style={{ backgroundImage: "url('/images/blog2.jpg')" }}
                 ></div>
                 <div className="front-blog-item-content article__body">
                   <div>
@@ -2617,7 +2719,7 @@ export default function Home() {
               <a className="front-blog-item article-blog wow fadeInUp" href="#">
                 <div
                   className="front-blog-item-thumbnail article__thumbnail"
-                  // style="background-image: url('./images/blog3.jpg')"
+                  style={{ backgroundImage: "url('/images/blog3.jpg')" }}
                 ></div>
                 <div className="front-blog-item-content article__body">
                   <div>
@@ -2649,19 +2751,7 @@ export default function Home() {
             <div className="text-align-center w-100 mt-5">
               <a href="#" className="cta-btn fill-icon mt-0">
                 <span>View All Blogs</span>
-                <div className="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="none"
-                    stroke="#000"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </div>
+                <div className="icon"></div>
               </a>
             </div>
           </div>
