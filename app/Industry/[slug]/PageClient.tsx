@@ -13,7 +13,7 @@ export default function PageClient({ page }: { page: string }) {
   // &populate[IndustryServiceDetailsIndustryWise][populate][DetailsName]=*
   // &populate=*
   const LoadPageContent = async (slug: string) => {
-    const url = `industries/?filters[slug][$eq]=${content}&populate[IndustryServiceDetailsIndustryWise][populate][DetailsName]=*&populate[CounterName]=*&populate[IndustryServiceDetails]=*&populate[IndustrySection2]=*&populate[steps][populate][StepDetails]=*&populate[RelatedServices][populate][RelatedDetailsServiceItem]=*`;
+    const url = `/industries/?filters[slug][$eq]=${content}&populate[IndustryServiceDetailsIndustryWise][populate][DetailsName]=*&populate[CounterName]=*&populate[IndustryServiceDetails]=*&populate[IndustrySection2]=*&populate[steps][populate][StepDetails]=*&populate[RelatedServices][populate][RelatedDetailsServiceItem]=*`;
 
     //
     // &populate[CounterName]=*

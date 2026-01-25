@@ -109,7 +109,7 @@ export default function PageClient({ page }: { page: string }) {
     let cancelled = false;
 
     getPage(
-      `services/?filters[slug][$eq]=${encodeURIComponent(content)}&populate=*`
+      `/services/?filters[slug][$eq]=${encodeURIComponent(content)}&populate=*`
     )
       .then((pageDetails: any) => {
         if (cancelled || !pageDetails?.data) return;
