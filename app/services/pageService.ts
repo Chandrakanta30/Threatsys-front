@@ -11,7 +11,7 @@ interface PageData {
  */
 // const BASEURL = process.env.Backend_API;
 
-const BASEURL = "https://peaceful-approval-7a35c0f781.strapiapp.com/api";
+const BASEURL = "https://peaceful-approval-7a35c0f781.strapiapp.com/api/";
 const token =
   "4a99a1cfd3bbb20f7d8d2296d80215c8a01d114c14f419d57b2f3c0a40fe71edd9c12f22cf8eea48600ee44728653e638cd410be93a64299a13c60a52bd0931799e8ac68c4ae0720a563c868feb4f2db8416164263e5310a4e458f912c243d2d00a6ae2d2c90e8369793feda51b1150e2c2117c34759a5ed2c085e4c682a84a1";
 export async function getPage(slug: string): Promise<PageData | null> {
