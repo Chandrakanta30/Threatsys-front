@@ -1,0 +1,24 @@
+/* ----------------------------------------------------------------
+			[ All Css Plugins & Helper Classes File ]
+-----------------------------------------------------------------*/
+
+/* == bootstrap == */
+@import url("../css/bootstrap.min.css");
+
+/* == animate css == */
+@import url("../css/animate.min.css");
+
+/* == magnific-popup == */
+@import url("../css/magnific-popup.css");
+
+/* == swiper.min font == */
+@import url("../css/swiper.min.css");
+
+/* == fancybox == */
+@import url("../css/fancybox.css");
+
+/* == carousel.css == */
+@import url("../css/carousel.css");
+
+/* == carousel.thumbs.css == */
+@import url("../css/carousel.thumbs.css");

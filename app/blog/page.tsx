@@ -1,144 +1,185 @@
-/* eslint-disable @next/next/no-img-element */
+import React from "react";
 
-export default function BlogPage() {
+const blogPosts = [
+  {
+    title: "Security Alerting and Monitoring Concepts and Tools",
+    date: "23 May 2025",
+    views: 508,
+    author: "Ankita Sahoo",
+    image: "./images/interview.jpg",
+    link: "./blog-details.html",
+  },
+  {
+    title: "ISO 27001 Lead Auditor Exam Practice Questions and Answers",
+    date: "23 May 2025",
+    views: 508,
+    author: "Ankita Sahoo",
+    image: "./images/interview.jpg",
+    link: "./blog-details.html",
+  },
+  {
+    title: "ISO 27001 Lead Auditor Exam Practice Questions and Answers",
+    date: "23 May 2025",
+    views: 508,
+    author: "Ankita Sahoo",
+    image: "./images/interview.jpg",
+    link: "./blog-details.html",
+  },
+  {
+    title: "ISO 27001 Lead Auditor Exam Practice Questions and Answers",
+    date: "23 May 2025",
+    views: 508,
+    author: "Ankita Sahoo",
+    image: "./images/interview.jpg",
+    link: "./blog-details.html",
+  },
+];
+
+const BlogPage = () => {
   return (
     <>
-      <section className="page-banner">
-        <img src="/images/page-header-bg.jpg" alt="banner" />
-        <div className="banner-container">
-          <div className="container">
-            <div className="row h-100">
-              <div className="col-12">
-                <div className="banner-text">
-                  <h1 className="sub-page-mr banner-title">Blog</h1>
-
-                  <ul className="breadcrum">
-                    <li>Home</li>
-                    <li>Resources</li>
-                    <li className="active-brd">Blog</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      {/* Banner */}
+      <section className="inner-banner about-banner">
+        <div className="container">
+          <div className="page-banner-content">
+            <h2>Blog</h2>
+            <ul className="list-style">
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+              <li>
+                <a href="">Resources</a>
+              </li>
+              <li className="active">Blog</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section className="section blogpage-section">
+      {/* Blog Section */}
+      <section className="section blog-section">
         <div className="container">
           <div className="row">
-            {/* ---------- LEFT SIDE BLOGS ---------- */}
-            <div className="col-md-9 right-col-blg">
+            {/* Blog Posts */}
+            <div className="col-xl-9 col-lg-9 col-md-8 col-12">
               <div className="row">
-                {[1, 2, 3, 4].map((i) => (
-                  <div className="col-md-6" key={i}>
-                    <a href="/blog-details" className="blog-card">
-                      <div className="blog-img">
-                        <img src="/images/blog1.jpg" alt="blog" />
+                {blogPosts.map((post, index) => (
+                  <div
+                    className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"
+                    key={index}
+                  >
+                    <a className="course-box" href={post.link}>
+                      <div className="course-image">
+                        <img src={post.image} alt="Blog" />
                       </div>
-                      <div>
-                        <div className="td-blog-date mb-10">
-                          <span className="date">
-                            <svg
-                              width="19"
-                              height="19"
-                              viewBox="0 0 18 18"
-                              fill="none"
-                            >
-                              <path
-                                d="M12.1111 2V4.80003M5.88888 2V4.80003M2 7.59992H16M3.55556 3.39988H14.4444C15.3036 3.39988 16 4.02668 16 4.79989V14.6C16 15.3732 15.3036 16 14.4444 16H3.55556C2.69645 16 2 15.3732 2 14.6V4.79989C2 4.02668 2.69645 3.39988 3.55556 3.39988Z"
-                                stroke="#286fd9"
-                                strokeWidth="1.44"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                            <span>29th Oct 2025</span>
-                          </span>
 
-                          <span className="date">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="20"
-                              height="20"
-                              fill="#286fd9"
-                            >
-                              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
-                            </svg>
-                            <span>by Admin</span>
-                          </span>
+                      <div className="course-header">
+                        <div className="course-title">{post.title}</div>
+
+                        <div className="course-meta">
+                          <div className="c-time">
+                            <img src="./images/calendar.png" alt="Date" />
+                            <span>{post.date}</span>
+                          </div>
+
+                          <div className="c-time">
+                            <img src="./images/view.png" alt="Views" />
+                            <span>{post.views}</span>
+                          </div>
+
+                          <div>
+                            Article by: <span>{post.author}</span>
+                          </div>
                         </div>
-
-                        <h3>
-                          How Crypto Exchanges Can Stay Ahead of Cyber Threats
-                          in 2025
-                        </h3>
-                        <p>
-                          The rise of cryptocurrency has reshaped global
-                          finance, but it has also opened a new frontier of
-                          cyber threats.
-                        </p>
                       </div>
                     </a>
                   </div>
                 ))}
               </div>
+
+              {/* Pagination */}
+              <div className="pagination">
+                <a href="#" className="page-btn">
+                  ‹
+                </a>
+                <a href="#" className="page-btn">
+                  1
+                </a>
+                <a href="#" className="page-btn">
+                  2
+                </a>
+                <a href="#" className="page-btn active">
+                  3
+                </a>
+                <a href="#" className="page-btn">
+                  4
+                </a>
+                <a href="#" className="page-btn">
+                  5
+                </a>
+                <a href="#" className="page-btn">
+                  ›
+                </a>
+              </div>
             </div>
 
-            {/* ---------- RIGHT SIDEBAR ---------- */}
-            <div className="col-md-3">
-              <div className="sidebar-list">
-                {/* SEARCH  */}
-                <div>
-                  <h4>Search</h4>
-                  <form action="#" className="search-frm">
-                    <input type="text" placeholder="Search here" />
-                    <button type="submit">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        fill="#b1b2b3"
-                      >
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85z" />
-                      </svg>
-                    </button>
-                  </form>
-                </div>
+            {/* Sidebar */}
+            <div className="col-xl-3 col-lg-3 col-md-4 col-12">
+              {/* Search */}
+              <div className="search-box">
+                <input type="text" placeholder="Search here" />
+                <button>🔍</button>
+              </div>
 
-                {/* RECENT POSTS */}
-                <div className="sidebar-widget">
-                  <h4>Recent Posts</h4>
-
-                  {[1, 2, 3].map((r) => (
-                    <div className="recent-post-item" key={r}>
-                      <img
-                        src="/images/blog1.jpg"
-                        alt="Post"
-                        className="recent-post-img"
-                      />
-                      <div className="recent-post-content">
-                        <h6 className="post-title">
-                          <a href="#">Save Soil, Save Area World Projects</a>
-                        </h6>
-                        <span className="post-meta">
-                          <span className="date">
-                            <svg width="17" height="17" fill="none">
-                              <path
-                                d="M12.1111 2V4.80003M5.88888 2V4.80003M2 7.59992H16M3.55556 3.39988H14.4444"
-                                stroke="#286fd9"
-                                strokeWidth="1.44"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                            <span>29th Oct 2025</span>
-                          </span>
-                        </span>
-                      </div>
-                    </div>
+              {/* Categories */}
+              <div className="categories-box">
+                <h4 className="box-title">Categories</h4>
+                <ul className="categories-list">
+                  {[
+                    "Artificial Intelligence (AI)",
+                    "AWS",
+                    "Career Oriented Courses",
+                    "CCSP",
+                    "CISA",
+                    "CISCO",
+                    "CISSP",
+                    "Cloud",
+                    "Cloud Security",
+                    "Cloud Security Alliance",
+                  ].map((category, index) => (
+                    <li key={index}>
+                      <a href="#">
+                        <i className="fas fa-angle-right"></i> {category}
+                      </a>
+                    </li>
                   ))}
-                </div>
+                </ul>
+              </div>
+
+              {/* Latest Posts */}
+              <div className="latest-box">
+                <h4 className="box-title">Latest Post</h4>
+
+                {[
+                  {
+                    date: "April 13, 2024",
+                    title: "The Right Learning Path for Beginners",
+                  },
+                  {
+                    date: "April 10, 2024",
+                    title: "Top 10 Skills in 2024",
+                  },
+                ].map((item, index) => (
+                  <div className="latest-item" key={index}>
+                    <img src="./images/interview.jpg" alt="Post" />
+                    <div className="latest-content">
+                      <span className="post-date">
+                        <i className="fas fa-calendar-alt"></i> {item.date}
+                      </span>
+                      <p className="post-title">{item.title}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -146,4 +187,6 @@ export default function BlogPage() {
       </section>
     </>
   );
-}
+};
+
+export default BlogPage;

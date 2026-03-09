@@ -1,151 +1,207 @@
+"use client";
+
 export default function Footer() {
   return (
-    <footer className="footer">
-      {/* <img src="./images/Footer-image-1.svg" className="fot-bg" alt="" /> */}
-      {/* <img src="./images/Footer-image-2.svg" className="fot-bg" alt="" /> */}
-
-      <div className="footer-top">
+    <>
+      <footer className="footer">
         <div className="container">
-          <div className="row footer-brand">
-            <div className="col-xl-6">
-              <div className="logo-box">
-                <img src="./images/TT-logo-light.svg" alt="logo" />
-                <h5>Your 360<sup>o</sup> Cyber Security Partner</h5>
-              </div>
+          <div className="row">
 
-              <h4 className="footer-line-txt">Since 2013</h4>
+            {/* Logo & Address */}
+            <div className="col col-lg-4 col-md-6 col-sm-6">
+              <div className="footer_widget">
+                <a href="#">
+                  <img
+                    src="/images/logo-dark.svg"
+                    alt="Threatsys Academy"
+                    className="footer-logo"
+                  />
+                </a>
+
+                <h3 className="footer_widget_title mb-2">Address:</h3>
+
+                <p>
+                  <strong>Corporate Office:</strong>
+                  <br />
+                  3rd Floor, F3, Ryan Tower, Technology Corridor,
+                  <br />
+                  near Trident Academy, Chandaka Industrial Estate,
+                  <br />
+                  Infocity, Chandrasekharpur, Bhubaneswar, Odisha 751024
+                </p>
+
+                <div className="social-icon">
+                  <a href="#"><i className="fab fa-facebook-f"></i></a>
+                  <a href="#"><i className="fab fa-instagram"></i></a>
+                  <a href="#"><i className="fab fa-youtube"></i></a>
+                  <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
             </div>
 
-            <div className="col-xl-6">
-              <p>
-                <strong>Corporate Office</strong>: 3rd Floor, F3, Ryan Tower,
-                Technology Corridor, near Trident Academy, Chandaka Industrial
-                Estate, Infocity, Chandrasekharpur, Bhubaneswar, Odisha 751024
-              </p>
+            {/* Sitemap */}
+            <div className="col col-md-2 col-sm-4">
+              <div className="footer_widget footer-dn">
+                <h3 className="footer_widget_title">Sitemap</h3>
 
-              <div className="social-menu">
-                <ul>
-                  <li>
-                    <a href="https://x.com/threatsys" target="_blank">
-                      <img src="./images/twitter.png" alt="" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/threatsys/"
-                      target="_blank"
-                    >
-                      <img src="./images/instagram.png" alt="" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.facebook.com/threatsys"
-                      target="_blank"
-                    >
-                      <img src="./images/facebook-app-symbol.png" alt="" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.youtube.com/@ThreatsysTechnologies"
-                      target="_blank"
-                    >
-                      <img src="./images/youtube.png" alt="" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/company/threatsys/"
-                      target="_blank"
-                    >
-                      <img src="./images/linkedin.png" alt="" />
-                    </a>
-                  </li>
+                <ul className="page_list unordered_list_block">
+                  <li><a href="#"><i className="fas fa-caret-right"></i> Home</a></li>
+                  <li><a href="/about-us"><i className="fas fa-caret-right"></i> About Us</a></li>
+                  <li><a href="/courses"><i className="fas fa-caret-right"></i> Courses</a></li>
+                  <li><a href="/career"><i className="fas fa-caret-right"></i> Careers</a></li>
+                  <li><a href="/testimonial"><i className="fas fa-caret-right"></i> Testimonial</a></li>
+                  <li><a href="/contact-us"><i className="fas fa-caret-right"></i> Contact us</a></li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div className="footer-links">
-            <div className="col">
-              <div className="f-cnt">
-                <div className="f-cell">
-                  <div className="cell">
-                    <img src="./images/phone-call.png" alt="" />
-                  </div>
-                  <div>
-                    <p>+91-9668200222</p>
-                    <p>+91-8018482222</p>
-                  </div>
-                </div>
+            {/* Quick Links */}
+            <div className="col col-md-3 col-sm-4">
+              <div className="footer_widget footer-dn">
+                <h3 className="footer_widget_title">Quick Links</h3>
 
-                <div className="f-cell">
-                  <div className="cell">
-                    <img src="./images/email.png" alt="" />
-                  </div>
-                  <div>
-                    <p>sales@threatsys.co.in</p>
-                    <p>support@threatsys.co.in</p>
-                  </div>
-                </div>
+                <ul className="page_list unordered_list_block">
+                  <li><a href="/testimonial"><i className="fas fa-caret-right"></i> Reviews</a></li>
+                  <li><a href="/training-calendar"><i className="fas fa-caret-right"></i> Training Calendar</a></li>
+                  <li><a href="/free-events"><i className="fas fa-caret-right"></i> Upcoming Events</a></li>
+                  <li><a href="/privacy-policy"><i className="fas fa-caret-right"></i> Privacy Policy</a></li>
+                </ul>
               </div>
             </div>
 
-            <div className="col">
-              <h3>Cyber Security Testing</h3>
-              <a href="#">IOT Security Testing</a>
-              <a href="#">SCADA Security Testing</a>
-              <a href="#">Thick Client Security Testing</a>
-              <a href="#">Web Application Security Testing</a>
-              <a href="#">Mobile Apps Security Testing</a>
-              <a href="#">Network Penetration Testing</a>
+            {/* Courses */}
+            <div className="col col-md-3 col-sm-4">
+              <div className="footer_widget footer-dn">
+                <h3 className="footer_widget_title">Courses</h3>
+
+                <ul className="page_list unordered_list_block">
+                  <li><a href="#"><i className="fas fa-caret-right"></i> Cyber Security</a></li>
+                  <li><a href="#"><i className="fas fa-caret-right"></i> Cloud Security</a></li>
+                  <li><a href="#"><i className="fas fa-caret-right"></i> Governance Risk & Compliance</a></li>
+                  <li><a href="#"><i className="fas fa-caret-right"></i> Security Testing</a></li>
+                  <li><a href="#"><i className="fas fa-caret-right"></i> Data Privacy</a></li>
+                </ul>
+              </div>
             </div>
 
-            <div className="col">
-              <h3>Industries</h3>
-              <a href="#">Banking & Finance</a>
-              <a href="#">Government Industry</a>
-              <a href="#">IT, ITeS & Retail Industry</a>
-              <a href="#">Manufacturing & Telecom</a>
-              <a href="#">Healthcare</a>
-              <a href="#">Higher Education</a>
+          </div>
+
+          <hr className="border-secondary" />
+
+          <div className="text-center small ftr">
+            <div>
+              Copyright © 2025 |{" "}
+              <a
+                href="https://threatsys.co.in/"
+                target="_blank"
+                rel="noopener"
+              >
+                Threatsys Technologies Private Limited
+              </a>
             </div>
 
-            <div className="col">
-              <h3>Company</h3>
-              <a href="#">About</a>
-              <a href="#">Core Values</a>
-              <a href="#">Leadership Team</a>
-              <a href="#">Why Choose Us</a>
-              <a href="#">Blog</a>
-              <a href="#">Case Studies</a>
-              <a href="#">News Coverage</a>
-              <a href="#">Careers</a>
-              <a href="#">Locations</a>
-              <a href="#">Global Presence</a>
-            </div>
-
-            <div className="col">
-              <h3>Support</h3>
-              <a href="#">CYQER</a>
-              <a href="#">Book Your Consultation</a>
-              <a href="#">Cookie Policy</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Help & FAQ</a>
-              <a href="#">Downloads</a>
-              <a href="#">Contact Us</a>
-              <a href="#">Sitemap</a>
+            <div>
+              <a href="/privacy-policy">Privacy Policy</a>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="btm-footer">
-        <div className="container">
-          <p>Copyright © 2025 Threatsys Technologies Private Limited</p>
+        {/* WhatsApp Button */}
+        <a
+          href="https://wa.me/919876543210"
+          target="_blank"
+          rel="noopener"
+          className="btn-whatsapp-pulse"
+        >
+          <i className="fab fa-whatsapp"></i>
+        </a>
+      </footer>
+
+      {/* Modal */}
+      <div
+        className="modal fade inq-modal"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabIndex={-1}
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered modal-lg">
+          <div className="modal-content">
+
+            <div className="modal-header">
+              <h1 className="modal-title fs-5">Enroll Now</h1>
+
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+
+            <div className="modal-body">
+              <form>
+
+                <div className="form-floating mb-3">
+                  <input type="text" className="form-control" id="floatingName"/>
+                  <label htmlFor="floatingName">Name</label>
+                </div>
+
+                <div className="form-floating mb-3">
+                  <input type="email" className="form-control" id="floatingEmail"/>
+                  <label htmlFor="floatingEmail">Email address</label>
+                </div>
+
+                <div className="form-floating mb-3">
+                  <input type="tel" className="form-control" id="floatingPhone"/>
+                  <label htmlFor="floatingPhone">Phone No.</label>
+                </div>
+
+                <div className="form-floating mb-3">
+                  <textarea
+                    className="form-control"
+                    id="floatingMessage"
+                    style={{ height: "150px" }}
+                  ></textarea>
+
+                  <label htmlFor="floatingMessage">
+                    Comment / Training Required
+                  </label>
+                </div>
+
+                <div className="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    className="form-check-input"
+                    id="termsCheck"
+                  />
+
+                  <label className="form-check-label" htmlFor="termsCheck">
+                    By submitting your contact details, you agree to our Terms
+                    of Use and Privacy Policy.
+                  </label>
+                </div>
+
+              </form>
+            </div>
+
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+
+              <button type="button" className="btn btn-primary">
+                Submit
+              </button>
+            </div>
+
+          </div>
         </div>
       </div>
-    </footer>
+    </>
   );
 }

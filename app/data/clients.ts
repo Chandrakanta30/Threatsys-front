@@ -1,0 +1,18 @@
+export const clients = [
+  { name: "Aadhaar", logo: "/images/brand-logos/Aadhaar.png" },
+  { name: "Airtel", logo: "/images/brand-logos/airtel.png" },
+  { name: "Alphabet", logo: "/images/brand-logos/alphabet.png" },
+  { name: "Amazon", logo: "/images/brand-logos/amazon.png" },
+  { name: "Axis Bank", logo: "/images/brand-logos/axis.png" },
+  { name: "Bihar Government", logo: "/images/brand-logos/bihar.png" },
+  { name: "Evolvous", logo: "/images/brand-logos/evolvous.png" },
+  { name: "First Bank", logo: "/images/brand-logos/firstbank.png" },
+  { name: "FNB", logo: "/images/brand-logos/fnb.png" },
+  { name: "Gemini", logo: "/images/brand-logos/gemini.png" },
+  { name: "HDFC Bank", logo: "/images/brand-logos/hdfc.png" },
+  { name: "i3MS", logo: "/images/brand-logos/i3ms.png" },
+  { name: "Infopulse", logo: "/images/brand-logos/infopulse.png" },
+  { name: "JSW", logo: "/images/brand-logos/jsw.png" },
+  { name: "Logo 1", logo: "/images/brand-logos/logo-1.png" },
+  { name: "Marketwolf", logo: "/images/brand-logos/marketwolf.png" },
+];
