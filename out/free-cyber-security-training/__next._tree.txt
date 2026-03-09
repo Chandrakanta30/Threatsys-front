@@ -24,4 +24,4 @@
 :HL["./images/book.png","image"]
 :HL["./images/trophy.png","image"]
 :HL["./images/discussion.png","image"]
-0:{"buildId":"G9YOoeo6_FZB2aa1fmQhj","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"free-cyber-security-training","paramType":null,"paramKey":"free-cyber-security-training","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"jeOowAZxedrZDYFGrHRU2","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"free-cyber-security-training","paramType":null,"paramKey":"free-cyber-security-training","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

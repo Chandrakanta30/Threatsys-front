@@ -20,4 +20,4 @@
 :HL["/images/vdo-2.jpg","image"]
 :HL["/images/vdo-1.jpg","image"]
 :HL["/images/vdo-3.jpg","image"]
-0:{"buildId":"G9YOoeo6_FZB2aa1fmQhj","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"success-stories","paramType":null,"paramKey":"success-stories","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"jeOowAZxedrZDYFGrHRU2","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"success-stories","paramType":null,"paramKey":"success-stories","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
