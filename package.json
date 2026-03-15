@@ -10,11 +10,28 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@iconify/react": "^6.0.2",
+    "@mui/icons-material": "^7.3.9",
+    "@mui/lab": "^7.0.1-beta.23",
+    "@mui/material": "^7.3.9",
+    "@prisma/client": "^7.5.0",
+    "@tabler/icons-react": "^3.40.0",
+    "apexcharts": "^5.10.3",
     "axios": "^1.13.2",
     "bootstrap": "5.3",
+    "formidable": "^3.5.4",
+    "mysql2": "^3.19.1",
     "next": "16.0.8",
+    "prisma": "^7.5.0",
     "react": "19.2.1",
+    "react-apexcharts": "^2.1.0",
     "react-dom": "19.2.1",
+    "react-hook-form": "^7.71.2",
+    "react-mui-sidebar": "^1.6.10",
+    "simplebar": "^6.3.3",
+    "simplebar-react": "^3.3.2",
     "swiper": "^12.1.2"
   },
   "devDependencies": {
