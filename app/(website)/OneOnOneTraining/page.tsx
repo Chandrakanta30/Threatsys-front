@@ -1,4 +1,5 @@
 "use client";
+import axiosInstance from "@/app/lib/axios";
 import React, { useEffect, useState } from "react";
 
 function OneOnOneTraining() {
@@ -8,26 +9,29 @@ function OneOnOneTraining() {
   const [header, setHeader] = useState<any>({});
 
   useEffect(() => {
-    fetch("/api/one-on-one/faqs")
-      .then((res) => res.json())
-      .then(setFaqs);
-  }, []);
+    const loadOneOnOneData = async () => {
+      try {
+        // Fire all four requests simultaneously
+        const [faqRes, progressRes, benefitsRes, headerRes] = await Promise.all(
+          [
+            axiosInstance.get("/one-on-one/faqs"),
+            axiosInstance.get("/one-on-one/progress"),
+            axiosInstance.get("/one-on-one/benefits"),
+            axiosInstance.get("/one-on-one/header"),
+          ]
+        );
 
-  useEffect(() => {
-    fetch("/api/one-on-one/progress")
-      .then((res) => res.json())
-      .then(setProgressItems);
-  }, []);
+        // Update states once all data is received
+        setFaqs(faqRes.data || []);
+        setProgressItems(progressRes.data || []);
+        setBenefits(benefitsRes.data || []);
+        setHeader(headerRes.data || {});
+      } catch (error) {
+        console.error("Critical error loading 1-on-1 sections:", error);
+      }
+    };
 
-  useEffect(() => {
-    fetch("/api/one-on-one/benefits")
-      .then((res) => res.json())
-      .then(setBenefits);
-  }, []);
-  useEffect(() => {
-    fetch("/api/one-on-one/header")
-      .then((res) => res.json())
-      .then(setHeader);
+    loadOneOnOneData();
   }, []);
 
   const renderHeading = (fullText: string, highlight: string) => {

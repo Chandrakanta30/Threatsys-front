@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "/api",
+  baseURL: "https://admin.threatsysacademy.com/api",
 });
 
 // We will initialize the interceptors inside a component to access the Context

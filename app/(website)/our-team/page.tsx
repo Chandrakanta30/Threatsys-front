@@ -80,7 +80,10 @@ const OurTeam = () => {
                     </a>
 
                     <div className="team-outer">
-                      <img src="/images/team-img.jpg" alt="Team Member" />
+                      <img
+                        src={member?.image_url || "/images/team-img.jpg"}
+                        alt="Team Member"
+                      />
                     </div>
 
                     <div className="team-info">

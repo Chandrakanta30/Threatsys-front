@@ -1,5 +1,6 @@
 "use client";
 
+import axiosInstance from "@/app/lib/axios";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -7,9 +8,21 @@ const FreeCyberSecurityTraining = () => {
   const [content, setContent] = useState<any>({});
 
   useEffect(() => {
-    axios.get("/api/free_cyber_training").then((res) => setContent(res.data));
-  }, []);
+    const loadCyberTrainingContent = async () => {
+      try {
+        // 1. Using standardized apiClient (automatically handles baseURL)
+        const res = await axiosInstance.get("/free-cyber-training");
 
+        // 2. Set content with a fallback to avoid null errors in your UI
+        setContent(res.data || {});
+      } catch (error) {
+        console.error("Error loading Free Cyber Training content:", error);
+        // Optional: set a default state or error flag here
+      }
+    };
+
+    loadCyberTrainingContent();
+  }, []);
   if (!content.description) return <p>Loading...</p>;
 
   return (

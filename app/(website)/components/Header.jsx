@@ -1773,7 +1773,7 @@ export default function Header() {
 
       <Link
         className="header-search"
-        href="/login-page"
+        href="/admin/authentication/login.html"
         target="_blank"
       >
         <Image

@@ -8553,7 +8553,7 @@ subtitle .shape-divider svg {
 .tree-container {
   display: flex;
   align-items: center;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   width: 100%;
 }
 

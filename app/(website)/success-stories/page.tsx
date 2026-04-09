@@ -1,13 +1,21 @@
 "use client";
+import axiosInstance from "@/app/lib/axios";
 import { useEffect, useState } from "react";
 
 const SuccessStories = () => {
   const [videos, setVideos] = useState([]);
 
   const loadVideos = async () => {
-    const res = await fetch("/api/videos");
-    const data = await res.json();
-    setVideos(data);
+    try {
+      // 1. Use your interceptor-enabled apiClient
+      const res = await axiosInstance.get("/videos");
+
+      // 2. Axios automatically parses JSON into 'data'
+      setVideos(res.data || []);
+    } catch (err) {
+      console.error("Failed to load videos:", err);
+      // Optional: Add a toast notification or state for error UI
+    }
   };
 
   useEffect(() => {

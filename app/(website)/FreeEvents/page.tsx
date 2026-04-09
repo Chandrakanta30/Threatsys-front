@@ -1,4 +1,5 @@
 "use client";
+import axiosInstance from "@/app/lib/axios";
 import React, { useEffect, useState } from "react";
 
 // const events = {
@@ -60,13 +61,32 @@ function FreeEvents() {
   });
 
   useEffect(() => {
-    fetch("/api/events")
-      .then((res) => res.json())
-      .then((data) => {
-        const grouped = { happening: [], upcoming: [], expired: [] };
-        data.events.forEach((ev: Event) => grouped[ev.type].push(ev));
+    const loadAndGroupEvents = async () => {
+      try {
+        // 1. Fetch using your standardized apiClient
+        const res = await axiosInstance.get("/events");
+        const eventsData = res.data.events || [];
+
+        // 2. Efficiently group events by type
+        const grouped = eventsData.reduce(
+          (acc: any, ev: any) => {
+            if (acc[ev.type]) {
+              acc[ev.type].push(ev);
+            }
+            return acc;
+          },
+          { happening: [], upcoming: [], expired: [] }
+        );
+
         setEvents(grouped);
-      });
+      } catch (error) {
+        console.error("Error loading or grouping events:", error);
+        // Fallback to empty groups to prevent UI crashes
+        setEvents({ happening: [], upcoming: [], expired: [] });
+      }
+    };
+
+    loadAndGroupEvents();
   }, []);
 
   return (

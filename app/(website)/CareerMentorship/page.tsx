@@ -1,4 +1,5 @@
 "use client";
+import axiosInstance from "@/app/lib/axios";
 import React, { useEffect, useState } from "react";
 
 const journeyCards = [
@@ -69,20 +70,24 @@ function CareerMentorship() {
   const [intro, setInro] = useState<any>({});
 
   useEffect(() => {
-    fetch("/api/careermentorship/features")
-      .then((res) => res.json())
-      .then(setFeatures);
-  }, []);
+    const loadCareerData = async () => {
+      try {
+        // Running requests in parallel for better performance
+        const [featuresRes, journeyRes, introRes] = await Promise.all([
+          axiosInstance.get("/careermentorship/features"),
+          axiosInstance.get("/careermentorship/journey"),
+          axiosInstance.get("/careermentorship/intro"),
+        ]);
 
-  useEffect(() => {
-    fetch("/api/careermentorship/journey")
-      .then((res) => res.json())
-      .then(setJourneyCards);
-  }, []);
-  useEffect(() => {
-    fetch("/api/careermentorship/intro")
-      .then((res) => res.json())
-      .then(setInro);
+        setFeatures(featuresRes.data);
+        setJourneyCards(journeyRes.data);
+        setInro(introRes.data); // Fixed the typo from 'setInro'
+      } catch (error) {
+        console.error("Error loading Career Mentorship data:", error);
+      }
+    };
+
+    loadCareerData();
   }, []);
 
   return (

@@ -1,4 +1,5 @@
 "use client";
+import axiosInstance from "@/app/lib/axios";
 import React, { useEffect, useState } from "react";
 
 function HireTrainerPage() {
@@ -6,15 +7,23 @@ function HireTrainerPage() {
   const [steps, setSteps] = useState([]);
 
   useEffect(() => {
-    fetch("/api/hire-trainer/comparison")
-      .then((res) => res.json())
-      .then((data) => setComparison(data));
-  }, []);
+    const loadHireTrainerData = async () => {
+      try {
+        // Execute both requests in parallel
+        const [comparisonRes, stepsRes] = await Promise.all([
+          axiosInstance.get("/hire-trainer/comparison"),
+          axiosInstance.get("/hire-trainer/steps"),
+        ]);
 
-  useEffect(() => {
-    fetch("/api/hire-trainer/steps")
-      .then((res) => res.json())
-      .then((data) => setSteps(data));
+        // Set state once both are resolved
+        setComparison(comparisonRes.data || []);
+        setSteps(stepsRes.data || []);
+      } catch (error) {
+        console.error("Error fetching Hire-a-Trainer data:", error);
+      }
+    };
+
+    loadHireTrainerData();
   }, []);
 
   const leftOptions = comparison.filter((i) => i.side === "left");

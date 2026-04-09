@@ -1,7 +1,7 @@
 :HL["/_next/static/chunks/163f657a16afbe5e.css","style"]
 :HL["/_next/static/chunks/03168284d8338140.css","style"]
 :HL["/_next/static/chunks/c3caf0ead634c45b.css","style"]
-:HL["/_next/static/chunks/5a18af092da65be7.css","style"]
+:HL["/_next/static/chunks/80aad3d0ded6ad8c.css","style"]
 :HL["/_next/static/chunks/c4ac85c82849ac08.css","style"]
 :HL["/_next/static/media/345c85a432359eed-s.p.eead68dd.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/80dbc432bf467303-s.p.5d34db31.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -17,11 +17,4 @@
 :HL["https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css","style"]
 :HL["https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css","style"]
 :HL["https://unpkg.com/splitting/dist/splitting.css","style"]
-:HL["./images/about_image_1.jpg","image"]
-:HL["./images/success.png","image"]
-:HL["./images/instructor.png","image"]
-:HL["./images/building.png","image"]
-:HL["./images/book.png","image"]
-:HL["./images/trophy.png","image"]
-:HL["./images/discussion.png","image"]
-0:{"buildId":"jeOowAZxedrZDYFGrHRU2","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"free-cyber-security-training","paramType":null,"paramKey":"free-cyber-security-training","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"Rkeeyc__dmGyplpilbXbo","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"(website)","paramType":null,"paramKey":"(website)","hasRuntimePrefetch":false,"slots":{"children":{"name":"free-cyber-security-training","paramType":null,"paramKey":"free-cyber-security-training","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true}},"isRootLayout":false},"staleTime":300}
